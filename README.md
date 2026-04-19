@@ -1,5 +1,13 @@
 # Meetingbot
 
+An open-source, self-hosted AI meeting agent that joins Google Meet as a real participant — listens via live captions, thinks with an LLM, talks back through synthesized voice, and shows up as a viseme-animated avatar on video. A hackable alternative to hosted meeting-bot APIs.
+
+## Demo
+
+https://github.com/MuhammadaliMS/Meetingbot/raw/main/demo/meetingbot-demo.mp4
+
+[▶ Watch demo video](demo/meetingbot-demo.mp4)
+
 This repo now contains a Dockerized TypeScript control plane for a meeting bot and a research-backed avatar architecture plan.
 
 What is implemented now:
