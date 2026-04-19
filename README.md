@@ -4,9 +4,7 @@ An open-source, self-hosted AI meeting agent that joins Google Meet as a real pa
 
 ## Demo
 
-https://github.com/MuhammadaliMS/Meetingbot/raw/main/demo/meetingbot-demo.mp4
-
-[▶ Watch demo video](demo/meetingbot-demo.mp4)
+https://github.com/user-attachments/assets/20b0f6ec-c3bf-429a-b452-a5ea6359c679
 
 This repo now contains a Dockerized TypeScript control plane for a meeting bot and a research-backed avatar architecture plan.
 
