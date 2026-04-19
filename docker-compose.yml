@@ -1,0 +1,22 @@
+services:
+  meetingbot:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+    shm_size: "1gb"
+    volumes:
+      - meetingbot-openutter:/root/.openutter
+      - meetingbot-openclaw:/root/.openclaw
+    restart: unless-stopped
+    # If you later wire a live avatar renderer into a virtual camera, map the
+    # host video device here after creating it with v4l2loopback.
+    # devices:
+    #   - /dev/video10:/dev/video10
+
+volumes:
+  meetingbot-openutter:
+  meetingbot-openclaw:

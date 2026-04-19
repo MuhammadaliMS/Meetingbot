@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meetingbot</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Meetingbot</h1>
+      <span class="status" id="wsStatus">connecting...</span>
+    </header>
+
+    <main>
+      <div class="left-panel">
+        <section class="avatar-container">
+          <canvas id="avatarCanvas" width="400" height="400"></canvas>
+          <div class="avatar-status" id="avatarStatus">idle</div>
+        </section>
+
+        <section class="chat-container">
+          <div class="chat-messages" id="chatMessages"></div>
+          <form class="chat-input" id="chatForm">
+            <input type="text" id="chatInput" placeholder="Type a message to the agent..." autocomplete="off">
+            <button type="submit">Send</button>
+          </form>
+        </section>
+      </div>
+
+      <div class="right-panel">
+        <section class="meeting-section">
+          <h2>Join Meeting</h2>
+          <form id="joinForm">
+            <input type="url" id="meetingUrl" placeholder="Google Meet URL" required>
+            <div class="form-row">
+              <select id="joinMode">
+                <option value="anon">Guest</option>
+                <option value="auth">Authenticated</option>
+              </select>
+              <input type="text" id="botName" placeholder="Bot name" value="Meetingbot">
+            </div>
+            <div class="form-row">
+              <select id="provider">
+                <option value="direct">Direct (with audio)</option>
+                <option value="openutter">OpenUtter (captions only)</option>
+              </select>
+            </div>
+            <button type="submit" id="joinBtn">Join Meeting</button>
+          </form>
+        </section>
+
+        <section class="sessions-section">
+          <h2>Sessions</h2>
+          <div class="sessions-list" id="sessionsList">
+            <p class="empty">No active sessions</p>
+          </div>
+        </section>
+
+        <section class="captions-section">
+          <h2>Live Captions</h2>
+          <div class="captions-list" id="captionsList">
+            <p class="empty">No captions yet</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/avatar.js"></script>
+</body>
+</html>
